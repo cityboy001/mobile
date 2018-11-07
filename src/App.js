@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { TabBar } from 'antd-mobile';
+import Index from './components/index/index.js'
 import './index.css'
 import Find from './components/find.js'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -8,7 +9,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'redTab',
+            selectedTab: 'blueTab',
             hidden: false,
         };
     }
@@ -38,7 +39,7 @@ class App extends Component {
                             />
                             }
                             selected={this.state.selectedTab === 'blueTab'}
-                            badge={1}
+
                             onPress={() => {
                                 this.setState({
                                     selectedTab: 'blueTab',
@@ -47,7 +48,7 @@ class App extends Component {
                             }}
                             data-seed="logId"
                         >
-
+                            <Route path='/' component={Index} />
                         </TabBar.Item>
                         <TabBar.Item
                             icon={
@@ -66,7 +67,6 @@ class App extends Component {
                             }
                             title="发现"
                             key="Koubei"
-                            badge={'new'}
                             selected={this.state.selectedTab === 'redTab'}
                             onPress={() => {
                                 this.setState({
@@ -94,7 +94,6 @@ class App extends Component {
                             }
                             title="个人中心"
                             key="Friend"
-                                dot
                             selected={this.state.selectedTab === 'greenTab'}
                             onPress={() => {
                                 this.setState({
