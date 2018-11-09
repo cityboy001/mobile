@@ -1,0 +1,14 @@
+body,html,#containerBox,#root{
+    height:100%;
+    width: 100%;
+}
+.am-button-ghost{
+    color: #108ee9;
+    background-color: transparent;
+    border: 1px solid #108ee9;
+    border-radius: 5px;
+
+}
+.themeGray{
+    color:#949494
+}
