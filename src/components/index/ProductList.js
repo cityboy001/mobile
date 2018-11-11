@@ -6,8 +6,8 @@ const data = [
         img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
         title: '任务标题',
         des: '任务描述',
-        price:2.8,
-        address:'京山某地1'
+        price:2.9,
+        address:'京山某地852'
     },
     {
         img: 'https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png',
@@ -147,6 +147,7 @@ class App extends React.Component {
                     <div style={{ display: 'flex', padding: '15px' }}>
                         <img style={{ height: '63px', width: '63px', marginRight: '15px' }} src={obj.img} alt="" />
                         <div style={{ display: 'inline-block' }}>
+
                             <div style={{ marginBottom: '8px', color: '#000', fontSize: '16px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '250px' }}>{obj.des}-{rowData}</div>
                             <div style={{ fontSize: '16px' }}><span style={{ fontSize: '30px', color: '#FF6E27' }}>{obj.price}</span> 元/任务</div>
                             <div><span>{obj.address}</span></div>

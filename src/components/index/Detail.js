@@ -69,8 +69,9 @@ class App extends Component {
                             { text: '确认', onPress: () => {
                                 Toast.info('您接下了此单，将于'+val.toLocaleString()+'送达');
                                 setTimeout(()=>{
-
+                                    this.props.history.push('/person/myOrder');
                                     this.onClose('modal1');
+
                                 },500)
                             } },
                         ])
@@ -101,7 +102,7 @@ class App extends Component {
                         <h5>备注：</h5>
                         <p>此次必须要5年以上的老司机才能接</p>
                     </div>
-                    <Button onClick={ this.showModal('modal1') } className={'am-button-ghost'} >接下此任务</Button>
+                    <Button disabled={obj.status} onClick={ this.showModal('modal1') } className={'am-button-ghost'} >接下此任务</Button>
                 </Card.Body>
             </Card>
         </div>
