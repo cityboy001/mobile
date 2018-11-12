@@ -141,9 +141,6 @@ class App extends React.Component {
                          backgroundColor: 'white',
                      }}
                 >
-                    <div style={{ height: '50px', lineHeight: '50px', color: '#888', fontSize: '18px', borderBottom: '1px solid #ddd' }}>
-                        {obj.title}
-                    </div>
                     <div style={{ display: 'flex', padding: '15px' }}>
                         <img style={{ height: '63px', width: '63px', marginRight: '15px' }} src={obj.img} alt="" />
                         <div style={{ display: 'inline-block' }}>

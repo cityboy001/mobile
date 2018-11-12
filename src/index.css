@@ -2,13 +2,33 @@ body,html,#containerBox,#root{
     height:100%;
     width: 100%;
 }
+.container{
+    padding-top: 10px;
+    background-color: white;
+}
 .am-button-ghost{
-    color: #108ee9;
+    color: #FF6E27;
     background-color: transparent;
-    border: 1px solid #108ee9;
+    border: 1px solid #FF6E27;
     border-radius: 5px;
-
+}
+.am-button-primary{
+    color: white;
+    background-color: #FF6E27;
+    border-radius: 5px;
+}
+.am-button-primary::before {
+    border: 1px solid #FF6E27 !important;
+}
+.am-button-active {
+    background-color: #FF6E27 !important;
 }
 .themeGray{
     color:#949494
+}
+.themeActive{
+    color:#FF6E27;
+}
+.themeBlue {
+    color: #33A3F4;
 }

@@ -3,12 +3,17 @@ import React, { Component } from 'react';
 import { TabBar } from 'antd-mobile';
 import Index from './components/index/index.js'
 import Detail from './components/index/Detail.js'
+import MixList from './components/index/MixList.js'
+import MixingStationDetail from './components/index/MixingStationDetail.js'
 import MyOrder from './components/person/MyOrder.js'
 import Person from './components/person/index.js'
+import PersonInfo from './components/person/PersonInfo.js'
 import './index.css'
 import Find from './components/find.js'
 import { BrowserRouter as Router, Route, withRouter  } from "react-router-dom";
 import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
+
+
 
 class Bar extends Component{
     constructor(props){
@@ -31,13 +36,15 @@ class Bar extends Component{
                 icon={<div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url('+require('./assert/images/index.svg')+') center center /  23px 23px no-repeat'
+
+                }}
                 />
                 }
                 selectedIcon={<div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url('+require('./assert/images/indexActive.svg')+') center center /  21px 21px no-repeat' }}
                 />
                 }
                 selected={this.props.location.pathname === '/'}
@@ -80,7 +87,9 @@ class Bar extends Component{
                     <div style={{
                         width: '22px',
                         height: '22px',
-                        background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
+                        background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat',
+                        // backgroundImage:+'! important'
+                    }}
                     />
                 }
                 selectedIcon={
@@ -117,8 +126,13 @@ class App extends Component {
                 <div className='containerBox'>
                     <CacheRoute  path={'/'} exact component={Index} />
                     <Route path={'/detail'} exact component={Detail} />
+                    <Route path={'/index/mixList'} exact component={MixList} />
+                    <Route path={'/index/mixingStationDetail/:id'} exact component={MixingStationDetail} />
+
+                    <Route path={'/find'} exact component={Find} />
 
                     <Route path={'/person'} exact component={Person} />
+                    <Route path={"/person/info"} exact component={PersonInfo} />
                     <CacheRoute path={'/person/myOrder'} exact component={MyOrder} />
                     <div className='containerBox' style={{ position:'fixed', height: '50px', width: '100%', bottom: 0 }}>
                         <RouteBar />

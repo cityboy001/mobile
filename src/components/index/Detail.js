@@ -83,7 +83,7 @@ class App extends Component {
                     <Button >选择送达时间</Button>
                 </DatePicker>
             </Modal>
-            <NavBar mode='light' icon={<Icon type="left"/>}
+            <NavBar mode='light' icon={<Icon size={'lg'} type="left"/>}
                     onLeftClick={() => { window.history.back()}}
                     rightContent={[
                         <Icon key="1" type="ellipsis"/>,
@@ -102,7 +102,7 @@ class App extends Component {
                         <h5>备注：</h5>
                         <p>此次必须要5年以上的老司机才能接</p>
                     </div>
-                    <Button disabled={obj.status} onClick={ this.showModal('modal1') } className={'am-button-ghost'} >接下此任务</Button>
+                    <Button disabled={obj.status} onClick={ this.showModal('modal1') } className={'am-button-primary'} >我要接单</Button>
                 </Card.Body>
             </Card>
         </div>
